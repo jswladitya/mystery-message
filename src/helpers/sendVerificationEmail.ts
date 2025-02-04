@@ -6,7 +6,7 @@ export async function sendVerificationEmail(
     email : string,
     username: string,
     verifyCode : string
-    // since hamara function promise return karega and us promise ka type hoga ApiResponse
+    // this function will return a promise of type ApiResponse
 ): Promise<ApiResponse> {
     try {
         await resend.emails.send({
@@ -16,7 +16,7 @@ export async function sendVerificationEmail(
             react: VerificationEmail({ username: username, otp: verifyCode }),
           });
 
-        return { success : true, message: "verification email senf successfully"}
+        return { success : true, message: "verification email send successfully"}
     } catch (emailError) {
         console.error("Error sending verification email ", emailError)
         return { success : false, message: "Failed to send verification email"}

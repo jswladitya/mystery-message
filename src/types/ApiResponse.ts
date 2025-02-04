@@ -1,8 +1,8 @@
-//not actual response but kis type se hamara response dikhna chahiye
+//not actual response but defining type of response  
 import {Message} from '@/model/User'
 
 export interface ApiResponse{
-    // kyuki messages ek sath deal kar raha hu islie me message interface jo mene banaya tha wo use karunga
+    // i am dealing with the messages, so i need message type to resolve typeScript errors
     success : boolean;
     message: string;
     isAcceptingMessages?: boolean

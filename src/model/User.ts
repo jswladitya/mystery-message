@@ -1,6 +1,6 @@
 import mongoose, {Schema, Document} from "mongoose";
 
-//ts wants to know the type of the data
+//ts wants to know the type of the data --> that's why i am using document
 export interface Message extends Document{
     content: string;
     createdAt : Date

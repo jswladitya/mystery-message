@@ -6,7 +6,7 @@ type ConnectionObject = {
 
 const connection : ConnectionObject = {}
 
-//hamare pass jo value return hogi connection se wo ek value hoga & promise ke ander kya value ati he mujhe usse koi matlab nahi islie me use <void> likhunga
+//after making a connection it will return a Promise , promise of type what, in that im not interested, so though i wrote <void>
 async function dbConnect():Promise<void>{
     if(connection.isConnected){
         console.log("Already connected to Database")
@@ -16,9 +16,9 @@ async function dbConnect():Promise<void>{
     try {
         const db = await mongoose.connect(process.env.MONGODB_URI || '')
 
-        connection.isConnected = db.connections[0].readyState
+        connection.isConnected = db.connections[0].readyState //readystate is a number
 
-        //todo --> db.connection & db dono ko clg karke dekho
+        //todo --> log db.connection & db and check
 
         console.log("Db connected successfully")
     } catch (error) {

@@ -1,5 +1,5 @@
 import { getServerSession } from "next-auth";
-//mene session me user ka saare data dala tha islie 
+//since i had put all the users data into the session
 import { authOptions } from "../auth/[...nextauth]/options";
 import dbConnect from "@/lib/dbConnect";
 import UserModel from "@/model/User";

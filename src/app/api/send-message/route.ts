@@ -24,6 +24,7 @@ export async function POST(request: Request) {
       );
     }
 
+    //crafting the message
     const newMessage = { content, createdAt: new Date() };
 
     // Push the new message to the user's messages array

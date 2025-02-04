@@ -1,9 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/*
-1. 
-
-*/
-
 import { NextAuthOptions } from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
 import bcrypt from 'bcryptjs';
@@ -19,6 +13,7 @@ export const authOptions: NextAuthOptions = {
         email: { label: 'Email', type: 'text' },
         password: { label: 'Password', type: 'password' },
       },
+
       async authorize(credentials: any): Promise<any> {
         await dbConnect();
         try {
@@ -49,6 +44,7 @@ export const authOptions: NextAuthOptions = {
       },
     }),
   ],
+
   callbacks: {
     async jwt({ token, user }) {
       // generating token from userdata & returning it
@@ -68,6 +64,7 @@ export const authOptions: NextAuthOptions = {
         session.user.username = token.username;
       }
       return session;
+      //now i can access user anywhere with the help of session
     },
   },
   session: {

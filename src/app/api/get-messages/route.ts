@@ -4,10 +4,10 @@ import mongoose from 'mongoose';
 import { User } from 'next-auth';
 import { getServerSession } from 'next-auth/next';
 import { authOptions } from '../auth/[...nextauth]/options';
-//NOTE : mene jo message ka interface banaya tha wo document type ka banaya tha islie i'll be using aggregation pipeline
+//NOTE : since i had defined in Message interface that each Message is a document , so i am using aggregation pipeline
 
 export async function GET(request: Request) {
-  console.log(request)
+  // console.log(request)
   await dbConnect();
   const session = await getServerSession(authOptions);
   const user: User = session?.user as User;
@@ -19,7 +19,7 @@ export async function GET(request: Request) {
     );
   }
 
-  
+  //when i wrote the options.ts i made the user to be string, 
   const userId = new mongoose.Types.ObjectId(user._id);
   try {
     const user = await UserModel.aggregate([
