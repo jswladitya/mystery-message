@@ -13,6 +13,7 @@
     "@hookform/resolvers": "^3.10.0",
     "@radix-ui/react-label": "^2.1.1",
     "@radix-ui/react-slot": "^1.1.1",
+    "@radix-ui/react-toast": "^1.2.5",
     "@react-email/components": "^0.0.32",
     "ai": "^4.1.13",
     "axios": "^1.7.9",
@@ -31,6 +32,7 @@
     "resend": "^4.1.1",
     "tailwind-merge": "^3.0.1",
     "tailwindcss-animate": "^1.0.7",
+    "usehooks-ts": "^3.1.0",
     "zod": "^3.24.1"
   },
   "devDependencies": {
