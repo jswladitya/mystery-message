@@ -5,6 +5,6 @@ export interface ApiResponse{
     // i am dealing with the messages, so i need message type to resolve typeScript errors
     success : boolean;
     message: string;
-    isAcceptingMessages?: boolean
-    messages?: Array<Message>
+    isAcceptingMessage?: boolean
+    messages?: Array<Message>;
 }
