@@ -61,7 +61,6 @@ export async function POST(request: Request) {
   
   
   export async function GET(request: Request) {
-    console.log(request)
     // Connect to the database
     await dbConnect();
   
