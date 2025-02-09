@@ -27,7 +27,9 @@ export default function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
+          <div className="ewlative w-full flex items-center justify-center dark">
           <Navbar/>
+          </div>
           {children}
         </body>
     </html>
