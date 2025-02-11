@@ -24,7 +24,7 @@ function Navbar({ className }: { className?: string }) {
           ></MenuItem>
         </Link>
         {/* github */}
-        <Link href={"#"}>
+        <Link href={"https://github.com/jswladitya/mystery-message"}>
           <MenuItem
             setActive={setActive}
             active={active}

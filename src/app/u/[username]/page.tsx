@@ -78,7 +78,7 @@ export default function SendMessage() {
       toast({
         title: 'Error',
         description:
-          axiosError.response?.data.message ?? 'Failed to sent message',
+          axiosError.response?.data.message ?? 'Failed to send message',
         variant: 'destructive',
       });
     } finally {
@@ -96,8 +96,8 @@ export default function SendMessage() {
   };
 
   return (
-    <div className="container mx-auto my-8 p-6 bg-white rounded max-w-4xl">
-      <h1 className="text-4xl font-bold mb-6 text-center">
+    <div className="container mx-auto my-8 p-4 sm:p-6 bg-white rounded max-w-4xl">
+      <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-center">
         Public Profile Link
       </h1>
       <Form {...form}>

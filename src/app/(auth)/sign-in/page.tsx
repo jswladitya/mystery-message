@@ -60,16 +60,16 @@ export default function SignInForm() {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-800">
-      <div className="w-full max-w-md p-8 space-y-8 bg-white rounded-lg shadow-md">
+    <div className="flex justify-center items-center min-h-screen bg-gray-950 p-7">
+      <div className="w-full max-w-sm p-6 space-y-6 bg-white rounded-lg shadow-md">
         <div className="text-center">
-          <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl mb-6">
+          <h1 className="text-3xl font-extrabold tracking-tight lg:text-4xl mb-4">
             Welcome Back to True Feedback
           </h1>
           <p className="mb-4">Sign in to continue your secret conversations</p>
         </div>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
             <FormField
               name="identifier"
               control={form.control}
@@ -92,7 +92,7 @@ export default function SignInForm() {
                 </FormItem>
               )}
             />
-            <Button className='w-full' type="submit">Sign In</Button>
+            <Button className="w-full" type="submit">Sign In</Button>
           </form>
         </Form>
         <div className="text-center mt-4">

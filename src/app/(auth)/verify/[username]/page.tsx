@@ -52,16 +52,16 @@ export default function VerifyAccount() {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <div className="w-full max-w-md p-8 space-y-8 bg-white rounded-lg shadow-md">
+    <div className="flex justify-center items-center min-h-screen bg-gray-950 p-7">
+      <div className="w-full max-w-sm p-6 space-y-6 bg-white rounded-lg shadow-md">
         <div className="text-center">
-          <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl mb-6">
+          <h1 className="text-3xl font-extrabold tracking-tight lg:text-4xl mb-4">
             Verify Your Account
           </h1>
           <p className="mb-4">Enter the verification code sent to your email</p>
         </div>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
             <FormField
               name="code"
               control={form.control}
@@ -73,7 +73,9 @@ export default function VerifyAccount() {
                 </FormItem>
               )}
             />
-            <Button type="submit">Verify</Button>
+            <Button type="submit" className="w-full">
+              Verify
+            </Button>
           </form>
         </Form>
       </div>

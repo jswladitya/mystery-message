@@ -1,6 +1,6 @@
 'use client';
 
-import {MessageCard}  from '@/components/MessageCard';
+import { MessageCard } from '@/components/MessageCard';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { Switch } from '@/components/ui/switch';
@@ -135,23 +135,23 @@ function UserDashboard() {
   };
 
   return (
-    <div className="my-20 mx-4 md:mx-8 lg:mx-auto p-6 bg-white rounded w-full max-w-6xl">
-      <h1 className="text-4xl font-bold mb-4">User Dashboard</h1>
+    <div className="my-20 mx-auto md:mx-8 lg:mx-auto p-6 bg-white rounded w-full max-w-6xl">
+      <h1 className="text-2xl font-bold mb-4">User Dashboard</h1>
 
       <div className="mb-4">
-        <h2 className="text-lg font-semibold mb-2">Copy Your Unique Link</h2>{' '}
-        <div className="flex items-center">
+        <h2 className="text-lg font-semibold mb-2">Copy Your Unique Link</h2>
+        <div className="flex flex-row items-center">
           <input
             type="text"
             value={profileUrl}
             disabled
-            className="input input-bordered w-full p-2 mr-2"
+            className="input input-bordered w-full p-1 mb-2 sm:mb-0 sm:mr-2"
           />
           <Button onClick={copyToClipboard}>Copy</Button>
         </div>
       </div>
 
-      <div className="mb-4">
+      <div className="mb-4 flex items-center">
         <Switch
           {...register('acceptMessages')}
           checked={acceptMessages}
@@ -182,7 +182,7 @@ function UserDashboard() {
         {messages.length > 0 ? (
           messages.map((message, index) => (
             <MessageCard
-              key={message._id  as string}
+              key={message._id as string}
               message={message}
               onMessageDelete={handleDeleteMessage}
             />
