@@ -70,7 +70,7 @@ export const authOptions: NextAuthOptions = {
   session: {
     strategy: 'jwt', //here i have chosen jwt so i can use token 
   },
-  secret: process.env.NEXTAUTH_SECRET,
+  secret: process.env.NEXTAUTH_URL,
   pages: {
     signIn: '/sign-in',
   },

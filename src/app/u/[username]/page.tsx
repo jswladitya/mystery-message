@@ -97,8 +97,8 @@ export default function SendMessage() {
 
   return (
     <div className="container mx-auto my-8 p-4 sm:p-6 bg-white rounded max-w-4xl">
-      <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-center">
-        Public Profile Link
+      <h1 className="text-2xl sm:text-4xl font-bold mb-2 text-left">
+        Public Profile
       </h1>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">

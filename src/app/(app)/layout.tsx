@@ -26,6 +26,7 @@ export default function RootLayout({
     <html lang="en">
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          suppressHydrationWarning
         >
           <div className="ewlative w-full flex items-center justify-center dark">
           <Navbar/>

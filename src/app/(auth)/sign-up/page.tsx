@@ -104,9 +104,9 @@ export default function SignUpForm() {
       <div className="w-full max-w-sm p-6 space-y-3 bg-white rounded-lg shadow-md">
         <div className="text-center">
           <h1 className="text-3xl font-extrabold tracking-tight lg:text-4xl mb-4">
-            Join True Feedback
+            Join Mystery Message
           </h1>
-          <p className="mb-4">Sign up to start your anonymous adventure</p>
+          <p className="mb-4">Sign up to start</p>
         </div>
 
         <Form {...form}>

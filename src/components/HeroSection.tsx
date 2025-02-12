@@ -10,7 +10,7 @@ function HeroSection() {
         fill="white"
       />
       <div className="p-3 realtive z-10 w-full text-center">
-        <h1 className="mt-48 md:mt-0 text-4xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+        <h1 className="mt-40 md:mt-0 text-4xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
           Mystery Message
         </h1>
         <p className="mt-4 font-normal text-xs md:text-lg text-neutral-300 max-w-lg mx-auto">
