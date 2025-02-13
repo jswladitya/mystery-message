@@ -6,7 +6,7 @@ import { getServerSession } from 'next-auth/next';
 import { authOptions } from '../auth/[...nextauth]/options';
 //NOTE : since i had defined in Message interface that each Message is a document , so i am using aggregation pipeline
 
-export async function GET(request: Request) {
+export async function GET() {
   // console.log(request)
   await dbConnect();
   const session = await getServerSession(authOptions);
