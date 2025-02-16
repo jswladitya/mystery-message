@@ -20,6 +20,7 @@ function UserDashboard() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isSwitchLoading, setIsSwitchLoading] = useState(false);
+  const [isClient, setIsClient] = useState(false);
 
   const { toast } = useToast();
 
@@ -27,7 +28,7 @@ function UserDashboard() {
     setMessages(messages.filter((message) => message._id !== messageId));
   };
 
-  const { data: session } = useSession();
+  const { data: session, status } = useSession();
 
   const form = useForm({
     resolver: zodResolver(AcceptMessageSchema),
@@ -93,8 +94,10 @@ function UserDashboard() {
     fetchAcceptMessages();
   }, [session, setValue, toast, fetchAcceptMessages, fetchMessages]);
 
-
- 
+  // Set isClient to true after the component mounts
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   // Handle switch change
   const handleSwitchChange = async () => {
@@ -119,14 +122,17 @@ function UserDashboard() {
     }
   };
 
+  if (status === 'loading') {
+    return <div>Loading...</div>;
+  }
+
   if (!session || !session.user) {
-    return <div></div>;
+    return <div>Please sign in to view your dashboard.</div>;
   }
 
   const { username } = session.user as User;
 
-  const baseUrl = `${window.location.protocol}//${window.location.host}`;
-  //https://message.com
+  const baseUrl = isClient ? `${window.location.protocol}//${window.location.host}` : '';
   const profileUrl = `${baseUrl}/u/${username}`;
 
   const copyToClipboard = () => {
@@ -183,7 +189,7 @@ function UserDashboard() {
       </Button>
       <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
         {messages.length > 0 ? (
-          messages.map((message) => (
+          messages.map((message, index) => (
             <MessageCard
               key={message._id as string}
               message={message}

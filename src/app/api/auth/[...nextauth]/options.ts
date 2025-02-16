@@ -14,6 +14,7 @@ export const authOptions: NextAuthOptions = {
         password: { label: 'Password', type: 'password' },
       },
 
+      //coding up sign-in functionalty
       async authorize(credentials: any): Promise<any> {
         await dbConnect();
         try {
@@ -70,7 +71,7 @@ export const authOptions: NextAuthOptions = {
   session: {
     strategy: 'jwt', //here i have chosen jwt so i can use token 
   },
-  secret: process.env.NEXTAUTH_URL,
+  secret: process.env.NEXTAUTH_SECRET,
   pages: {
     signIn: '/sign-in',
   },

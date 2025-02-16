@@ -7,6 +7,8 @@ export async function POST(request: Request) {
 
   try {
     const { username, code } = await request.json();
+    
+    //since username is coming through url, so need to validate it first 
     const decodedUsername = decodeURIComponent(username);
     const user = await UserModel.findOne({ username: decodedUsername });
 

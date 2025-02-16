@@ -22,6 +22,7 @@ export async function DELETE(
   try {
     const updateResult = await UserModel.updateOne(
       { _id: user._id },
+      //since message ek doc he , toh sabke pass unique id hi hogi , wahi id me pass kar raha hu
       { $pull: { messages: { _id: messageId } } }
     );
 
