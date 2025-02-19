@@ -44,17 +44,17 @@ function UserDashboard() {
       setValue('acceptMessages', response.data.isAcceptingMessage);
     } catch (error) {
       const axiosError = error as AxiosError<ApiResponse>;
-      toast({
-        title: 'Error',
-        description:
-          axiosError.response?.data.message ||
-          'Failed to fetch message settings',
-        variant: 'destructive',
-      });
+      // toast({
+      //   title: 'Error',
+      //   description:
+      //     axiosError.response?.data.message ||
+      //     'Failed to fetch message settings',
+      //   variant: 'destructive',
+      // });
     } finally {
       setIsSwitchLoading(false);
     }
-  }, [setValue, toast]);
+  }, [setValue]);
 
   const fetchMessages = useCallback(
     async (refresh: boolean = false) => {
@@ -112,13 +112,13 @@ function UserDashboard() {
       });
     } catch (error) {
       const axiosError = error as AxiosError<ApiResponse>;
-      toast({
-        title: 'Error',
-        description:
-          axiosError.response?.data.message ??
-          'Failed to update message settings',
-        variant: 'destructive',
-      });
+      // toast({
+      //   title: 'Error',
+      //   description:
+      //     axiosError.response?.data.message ??
+      //     'Failed to update message settings',
+      //   variant: 'destructive',
+      // });
     }
   };
 
