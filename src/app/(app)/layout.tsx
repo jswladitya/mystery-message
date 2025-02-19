@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
-  title: "Get Feedbacks App",
+  title: "Feedback App",
   description: "Get Real Feedbacks From Real People",
 };
 

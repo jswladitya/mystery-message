@@ -5,7 +5,7 @@ import { Toaster } from '@/components/ui/toaster';
 
 
 export const metadata: Metadata = {
-  title: "Get Feedback App",
+  title: "Feedback App",
   description: "Get Real Feedbacks From Real People",
 };
 
