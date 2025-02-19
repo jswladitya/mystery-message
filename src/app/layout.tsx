@@ -5,8 +5,8 @@ import { Toaster } from '@/components/ui/toaster';
 
 
 export const metadata: Metadata = {
-  title: "Get feedback today",
-  description: "Send Anonymous messages and feedbacks",
+  title: "Get Feedback App",
+  description: "Get Real Feedbacks From Real People",
 };
 
 export default function RootLayout({

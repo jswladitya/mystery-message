@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
-  title: "Get feedback today",
-  description: "Send Anonymous Messages and feedbacks",
+  title: "Get Feedbacks App",
+  description: "Get Real Feedbacks From Real People",
 };
 
 export default function RootLayout({
