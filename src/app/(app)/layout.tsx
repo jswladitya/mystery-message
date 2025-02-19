@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
-  title: "Mystery Message",
+  title: "Get feedback today",
   description: "Send Anonymous Messages and feedbacks",
 };
 

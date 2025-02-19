@@ -5,7 +5,7 @@ import { Toaster } from '@/components/ui/toaster';
 
 
 export const metadata: Metadata = {
-  title: "Mystery Message",
+  title: "Get feedback today",
   description: "Send Anonymous messages and feedbacks",
 };
 

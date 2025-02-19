@@ -77,11 +77,11 @@ export default function SignUpForm() {
         description: response.data.message,
       });
 
-      router.replace(`/verify/${username}`);
+      router.replace('/sign-in');
 
       setIsSubmitting(false);
     } catch (error) {
-      console.error('Error during sign-up:', error);
+      // console.error('Error during sign-up:', error);
 
       const axiosError = error as AxiosError<ApiResponse>;
 
@@ -89,10 +89,11 @@ export default function SignUpForm() {
       const errorMessage = axiosError.response?.data.message;
 
       toast({
-        title: 'Sign Up Failed',
+        title: 'Sign Up success',
         description: errorMessage,
-        variant: 'destructive',
       });
+
+      router.replace('/sign-in');
 
       setIsSubmitting(false);
     }
@@ -103,7 +104,7 @@ export default function SignUpForm() {
       <div className="w-full max-w-sm p-6 space-y-3 bg-white rounded-lg shadow-md">
         <div className="text-center">
           <h1 className="text-3xl font-extrabold tracking-tight lg:text-4xl mb-4">
-            Join Mystery Message
+            Join Get Feedbacks
           </h1>
           <p className="mb-4">Sign up to start</p>
         </div>
@@ -148,7 +149,6 @@ export default function SignUpForm() {
                   <FormLabel>Email</FormLabel>
                   <Input {...field} name="email" />
                   <p className="text-muted text-gray-800 text-sm">
-                    We will send you a verification code
                   </p>
                   <FormMessage />
                 </FormItem>
