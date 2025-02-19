@@ -83,7 +83,7 @@ export async function POST(request: Request) {
       if (!foundUser) {
         // User not found
         return Response.json(
-          { success: false, message: 'User not found' },
+          { success: false },
           { status: 404 }
         );
       }
